@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:orientation="vertical"
+    app:contentPadding="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+
+    <!--android:background="@drawable/rounded_corner_layout"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0.5dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".25"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bycycle_1" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_border" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".75"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/productname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Idly Vada Combo"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:textSize="@dimen/text_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.8">
+
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:singleLine="true"
+                        android:text="1 Set"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/text_small" />
+
+                    <!-- <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtINRSym" android:layout_below="@+id/tv_unit" android:layout_marginTop="@dimen/small_margin" android:textColor="@color/black" android:textSize="@dimen/large_text_content" android:text="@string/rupees_symbol"/>-->
+
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_unit"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/tv_unit"
+                        android:singleLine="true"
+                        android:text="25"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/large_text_content" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_weight="1.2"
+                    android:weightSum="3.2">
+
+                    <ImageView
+                        android:id="@+id/img_sub"
+                        android:layout_width="41dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/tv_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/textMenuName"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="@dimen/large_margin"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/img_add"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/large_margin"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/plus" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
