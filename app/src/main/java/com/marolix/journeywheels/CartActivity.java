@@ -55,7 +55,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         preferencesEditor = preferences.edit();
 
         if (isFirstRun("FIRST_PROMO_CODE")) {
-            inputLayoutPromocode.setHelperText("Use FOOD50 promocode to avail 50% off");
+            inputLayoutPromocode.setHelperText("Use RIDE50 promocode to avail 50% off");
         }
         proceed_layout.setOnClickListener(this);
         apply_promocode.setOnClickListener(this);
@@ -140,7 +140,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.apply_promocode:
                 String promo_text = et_promo_code.getText().toString();
-                if (promo_text.equals("FOOD50")) {
+                if (promo_text.equals("RIDE50")) {
 
                     if (isFirstRun("PROMO_CODE")) {
 
@@ -149,7 +149,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                         amount_total.setText("\u20B9 " + cart_amount);
                         et_promo_code.setText("");
                         inputLayoutPromocode.setHelperText("Promo code applied successfully");
-                        Toast.makeText(this, "FOOD50 applied successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "RIDE50 applied successfully", Toast.LENGTH_SHORT).show();
                     } else {
                         inputLayoutPromocode.setError("This promo code applied only once per user");
                         Toast.makeText(this, "This promo code applied only once per user", Toast.LENGTH_SHORT).show();
